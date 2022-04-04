@@ -1,0 +1,78 @@
+{% extends ('layouts/default.html') %}
+{% block styles %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock styles %}
+{% block body %}
+<div class="container">
+    <div class="wrapper">
+        <div class="ele">
+            <div style="display:grid;grid-template-columns: 10% 90%;">
+                <div>
+                    <span>
+                        <img src="../static/img/icon-camera-512.png" alt="" style="width:80%;height:100% ;">
+                    </span>
+                </div>
+                <div>
+                    <span id="video_record" class="d-block p-2  text-white" style="background-color: #bae9f7">
+                        <a href="{{url_for('record')}}" style="text-decoration:none">Click here,enable your webcame and
+                            start a record</a>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <img src="../static/img/undraw_video_files_fu10.svg" alt="" style="width:100%;height:85% ; ">
+                    </span>
+                </div>
+                <div>
+                    <span id="video_upload" class="d-block p-2  text-white">
+                        <form action="{{url_for('home')}}" method="POST" enctype="multipart/form-data" id="sendvideo">
+                            <input id="input-b2" name="attachment" type="file" class="file" data-show-preview="false"
+                                accept=".mp4,.webm,.ogg,.avi">
+                            <input type="hidden" name="csrfmiddlewaretoken"
+                                value="w1InGeAOhKiyGSFrG8v73nUbNhbhNZVDyH3re8ae509rS4qYutfSonIc8LrDQt6j">
+                            <input type="hidden" name="name" class="form-control" value="rfdrd">
+                            <input type="hidden" name="meditation" value="3">
+                        </form>
+                    </span>
+                </div>
+
+                {% if error %}
+                <div></div>
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        <div>
+            <p><img src="../static/img/undraw_mindfulness_scgo.svg" alt="" style="float: right; width:40%; height:40%">
+            </p>
+        </div>
+        <div>
+            <p><img src="../static/img/menuimagefixe.svg" alt="" style="width:80%; height:80%"></p>
+        </div>
+        <div>
+            <p><img src="../static/img/undraw_startled.svg"
+                    style="transform: scaleX(-1); width:80%; height:80% ;float:right;" alt=""></p>
+        </div>
+    </div>
+    <div class="commentary">
+        <div style="background-color: #bae9f7; padding:1em">
+            <form method="POST" action="{{url_for('comment')}}" id="formular">
+                <div id="conter">
+                    <div class="form-group">
+                        <textarea class="form-control" id="commentstext" name="comment" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary col-lg" id="sendcomment">Send commentary</button>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

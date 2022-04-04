@@ -1,0 +1,40 @@
+{% extends ('layouts/default.html') %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block styles %}
+        <link rel="stylesheet" href="{{url_for('static',filename='css/login.css')}}">
+{% endblock styles %}
+{% block body %}
+
+    <div class="container">
+        <div class="wrapper">
+            <div class="login" style="  background-color: rgb(17, 105, 105); ">
+                <form method="POST" action="{{url_for('signuser')}}" id="formularRegister">
+                    <input type="hidden" name="goal" value="connexion">
+                    <img src="{{url_for('static', filename='img/undraw_male_avatar_323b.svg')}}" alt="" width="100px" height="100px" style="margin-left: 40% !important;margin-right: 40% !important;">
+                    <div class="mb-3">
+                        <input class="form-control form-control-lg" type="text" name="login" placeholder="login" required maxlength="10">
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control form-control-lg" type="text" name="email" placeholder="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control form-control-lg"type="password" name="password" placeholder="password" required>
+                    </div>
+                     <div class="mb-3">
+                         <input class="form-control form-control-lg" type="password" name="passwordcfi" placeholder="password" required>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary" id="sendlogin" style="text-align:center;"> Login</button>
+                </form>
+            </div>
+
+            <div class="info" style="border-radius: 1px;">
+                <p><img src="{{url_for('static', filename='img/undraw_checkacound.svg')}}" style="width: 100%;height:100%" alt=""></p>
+            </div>
+        </div>
+    </div>
+{% endblock body %}
+
+
+
+

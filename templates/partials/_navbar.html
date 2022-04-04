@@ -1,0 +1,79 @@
+<main>
+    <header>
+        <div class="px-3 py-2 text-white" style="background-color: #bae9f7a1">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="#"
+                        class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                        <img src="{{url_for('static', filename='img/MindfulRelax.png')}}" alt=""
+                            style="width:200px ;height: 60px;">
+                    </a>
+                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+
+                        <li>
+                            <a href="{{url_for('home')}}" class="nav-link text-black">
+                                <svg class="bi d-block mx-auto mb-1 " width="24" height="24"
+                                    style="color: aliceblue !important;">
+                                    <use xlink:href="#home" />
+                                </svg>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{url_for('about')}}" class="nav-link text-black">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                    <use xlink:href="#table" />
+                                </svg>
+                                About us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{url_for('showcomment')}}" class="nav-link text-black">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                    <use xlink:href="#speedometer2" />
+                                </svg>
+                                Commentary
+                            </a>
+                        </li>
+                        {% if session['user'] %}
+                        <li>
+                            <a href="{{url_for('useraccount',user_id=session['user'])}}" class="nav-link text-black">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                    <use xlink:href="#people-circle" />
+                                </svg>
+                                Account
+                            </a>
+                        </li>
+                        {% endif %}
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="px-3 py-2 border-bottom mb-3">
+            <div class="container d-flex flex-wrap justify-content-center">
+                <div class="text-end">
+                    {% if not session['user'] %}
+                    <a href="{{url_for('login')}}" class="btn btn-light text-dark me-2 ">Login</a>
+                    <a href="{{url_for('register')}}" class="btn btn-primary ">Sign-up</a>
+                    {% endif %}
+                </div>
+
+            </div>
+            <button style=" float:right " class=" justify-content-center" type="button" data-toggle="modal"
+                data-target=".bd-example-modal-lg">hello welcome with us to upload video be sure your are
+                login </button>
+
+        </div>
+    </header>
+
+    <div class="b-example-divider"></div><br>
+</main>
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
+</div>

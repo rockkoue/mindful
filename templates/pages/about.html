@@ -1,0 +1,118 @@
+{% extends 'layouts/default.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block styles %}
+        <link rel="stylesheet" href="{{url_for('static',filename='css/login.css')}}">
+<style>
+    body {
+    background-color: #f7f6f6
+}
+
+.card {
+    border: none;
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    border-radius: 4px
+}
+
+.dots {
+    height: 4px;
+    width: 4px;
+    margin-bottom: 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block
+}
+
+.badge {
+    padding: 7px;
+    padding-right: 9px;
+    padding-left: 16px;
+    box-shadow: 5px 6px 6px 2px #e9ecef
+}
+
+.user-img {
+    margin-top: 4px
+}
+
+.check-icon {
+    font-size: 17px;
+    color: #c3bfbf;
+    top: 1px;
+    position: relative;
+    margin-left: 3px
+}
+
+.form-check-input {
+    margin-top: 6px;
+    margin-left: -24px !important;
+    cursor: pointer
+}
+
+.form-check-input:focus {
+    box-shadow: none
+}
+
+.icons i {
+    margin-left: 8px
+}
+
+.reply {
+    margin-left: 12px
+}
+
+.reply small {
+    color: #b7b4b4
+}
+
+.reply small:hover {
+    color: green;
+    cursor: pointer
+}
+</style>
+{% endblock styles %}
+{% block body %}
+
+   <!-- Main Body -->
+        <div class="container">
+            <div class="wrapper">
+                <div class="login">
+                    <h5 style="color: blue;">Mindful Relax Team</h5>
+                    <ul style="color: back;">
+                        <li>Alexey Kashevnik</li>
+                        <li>Igor Lashkov</li>
+                        <li>Mikhail Kruglov</li>
+                        <li>Igor Ryabchikov</li>
+                        <li> Nikita Saveliev</li>
+                        <li>Vladislav Malutin</li>
+                        <li> Ali Ammar</li>
+                        <li> Valaa Osman</li>
+                        <li>
+                            Evgeny Omelyanovich</li>
+                    </ul>
+                </div>
+                <div class="info" style=" padding:20%; ; ">
+                    <span>Mindful relax is a platform fom scientific research, the purpose
+                        main is to help understanding of the behavior of a persons
+                        in meditation
+                    </span>
+                </div>
+
+            </div>
+            <div class="publication" style="background-color: rgb(42, 156, 156); padding: 1em">
+                <h4 style="color: cornsilk;">publication</h4>
+                <p>Publications
+                    1. Kashevnik A., Kruglov M., Lashkov I., Teslya N., Mikhailova P., Ripachev E., Vladislav M.,
+                    Saveliev N., Ryabchikov I. Human Psychophysiological Activity Estimation Based on Smartphone Camera
+                    and Wearable Electronics. Future Internet, MDPI AG, Basel, Switzerland. 2020. Vol. 12(7). P. 1–27.
+                    2. Kashevnik A., Kruglov M., Saveliev N., Parfenov V., Maiatin A. Motivational and Personalization
+                    Strategies for Human Activities in Everyday Life. Proceedings of the 26th Conference of Open
+                    Innovations Association (FRUCT), Yaroslavl, Russia, 23-24 April 2020, Conference of Open Innovations
+                    Association FRUCT, IEEE. 2020. P. 136–142.
+                    3. Alexey Kashevnik, Igor Lashkov, Polina Mikhailova, Evgeny Ripachev, Vladislav Malutin, Meditation
+                    Process Estimation Based on Smartphone Sensors and Wearable Electronics, DTGS 2020, St. Petersburg,
+                    Russia.</p>
+            </div>
+
+        </div>
+{% endblock body %}
+
+

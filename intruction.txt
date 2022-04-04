@@ -1,0 +1,3 @@
+to build and run the application.
+#docker-compose build && docker-compose up
+#acces app:http://localhost:5000/

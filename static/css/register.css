@@ -1,0 +1,38 @@
+           .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+            }
+
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+
+            }
+
+            .wrapper {
+                display: grid;
+                grid-template-columns: 50% 50%;
+            }
+
+            .wrapper>div {
+                padding: 1em;
+                margin: 0.5em;
+            }
+
+            .commentary {
+                display: grid;
+
+                margin-top: 1em;
+            }
+
+            .foot {
+                display: grid;
+                margin: 1em;
+                background-color:#bae9f7;
+                text-align: center;
+
+            }
